@@ -18,6 +18,10 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Plugins
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['gzip_cache']
+
 # Social widget
 SOCIAL = (('Github', 'https://github.com/mauricioabreu'),
           ('Twitter', 'https://twitter.com/maugzoide'),)
