@@ -16,6 +16,8 @@ MAIN_MENU = True
 
 STATIC_PATHS = ['static']
 
+FAVICON = SITEURL + '/static/favicon.ico'
+
 MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'))
