@@ -3,9 +3,22 @@
 
 AUTHOR = u'maugzoide'
 SITENAME = u'maugzoide'
+SITETITLE = 'maugzoide'
+SITESUBTITLE = u'people, technology, culture'
+SITELOGO = u'http://blog.maugzoide.com/static/profile.png'
 SITEURL = ''
 
 PATH = 'content'
+
+THEME = 'theme'
+
+MAIN_MENU = True
+
+STATIC_PATHS = ['static']
+
+MENUITEMS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html'))
 
 TIMEZONE = 'America/Sao_Paulo'
 
@@ -23,7 +36,8 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['gzip_cache']
 
 # Social widget
-SOCIAL = (('Github', 'https://github.com/mauricioabreu'),
-          ('Twitter', 'https://twitter.com/maugzoide'),)
+SOCIAL = (('github', 'https://github.com/mauricioabreu'),
+          ('twitter', 'https://twitter.com/maugzoide'),
+          ('rss', '//blog.maugzoide.com/feeds/all.atom.xml'))
 
 DEFAULT_PAGINATION = 10
