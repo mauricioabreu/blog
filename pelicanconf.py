@@ -35,7 +35,7 @@ AUTHOR_FEED_RSS = None
 
 # Plugins
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['gzip_cache']
+PLUGINS = ['assets', 'gzip_cache']
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/mauricioabreu'),
