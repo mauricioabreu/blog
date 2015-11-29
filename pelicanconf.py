@@ -41,5 +41,6 @@ PLUGINS = ['assets', 'gzip_cache']
 SOCIAL = (('github', 'https://github.com/mauricioabreu'),
           ('twitter', 'https://twitter.com/maugzoide'),
           ('rss', '//blog.maugzoide.com/feeds/all.atom.xml'))
+GOOGLE_ANALYTICS = 'UA-70804647-1'
 
 DEFAULT_PAGINATION = 10
