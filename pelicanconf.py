@@ -43,4 +43,6 @@ SOCIAL = (('github', 'https://github.com/mauricioabreu'),
           ('rss', '//blog.maugzoide.com/feeds/all.atom.xml'))
 GOOGLE_ANALYTICS = 'UA-70804647-1'
 
+DISQUS_SITENAME = 'maugzoide'
+
 DEFAULT_PAGINATION = 10
