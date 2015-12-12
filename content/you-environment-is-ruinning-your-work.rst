@@ -1,4 +1,4 @@
-Your environment is ruinning your work
+Your environment is ruining your work
 ######################################
 
 :date: 2015-12-09 21:25
