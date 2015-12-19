@@ -12,7 +12,7 @@ env.deploy_path = 'output'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
-production = 'root@162.243.186.254:22'
+production = 'maugzoide@162.243.186.254:22'
 dest_path = '/var/www/maugzoide.com/blog'
 
 # Port for `serve`
