@@ -2,7 +2,7 @@ How to build a blog using Pelican - Part I
 ##########################################
 
 :date: 2015-12-19 16:41
-:tags: pelican
+:tags: pelican, python
 :slug: how-to-build-a-blog-using-pelican-part-I
 
 This post is part of a tutorial series showing how I built this blog: the stack, tools, workflow and deploy.
@@ -77,7 +77,7 @@ Theming
 
 Pelican comes with a default theme. This blog is using Flex_ theme, a clean and beautiful theme designed mainly by Alexandre Vicenzi and others contributors.
 
-In the next post I will talk about some tools and workflow.
+In the `next post <{filename}/how-to-build-a-blog-using-pelican-part-II.rst>`_ I will talk about some tools and workflow.
 
 .. _Pelican docs: http://docs.getpelican.com
 .. _nginx: http://nginx.org/
