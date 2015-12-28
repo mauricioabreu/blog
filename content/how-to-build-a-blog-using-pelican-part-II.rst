@@ -40,7 +40,7 @@ What does it mean at all? It is the whole set of commands I use everytime I blog
 Plugins
 -------
 
-I consider the plugin to be a tool. A tool is something you use to achieve a goal. Some tools have a lot of responsabilities, others not so much - they perform micro tasks.
+I consider a plugin to be a tool. A tool is something you use to achieve a goal. Some tools have a lot of responsabilities, others not so much - they perform micro tasks.
 
 This blog uses 2 plugins: `assets` and `gzip_cache`. Former is a useful plugin to compile and minify CSS and JS files, reducing the amount of files browsers need to download. The latter is a plugin to compress files to prevent the web server to do it at runtime. You can find more info on how to use the plugin ecosystem in the `Pelican docs`_.
 
