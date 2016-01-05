@@ -1,4 +1,5 @@
 cssmin
 Fabric
 pelican
+Pygments
 webassets
