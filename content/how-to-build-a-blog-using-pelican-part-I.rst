@@ -56,7 +56,7 @@ will appear in your console. See how fast it is! Impressive, right?
 
 Use Python built-in HTTP server to serve your content locally
 
-    python -m SimpleHTTPServer 8000
+    $ python -m SimpleHTTPServer 8000
 
 and here you go! Open your preferred web browser and enter `http://localhost:8000/`.
 
