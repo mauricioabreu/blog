@@ -32,7 +32,7 @@ We don't want to send our unencrypted file to Github, right? To achieve a higher
 
 .. code-block:: shell
 
-    $ travis encrypt-file your_rsa_file (the private one, not the .pub)
+    $ travis encrypt-file deploy-key # (the private one, not the .pub)
 
 This command will generate a file with the `.enc` extension. Add the `.enc` file to repository.
 
