@@ -2,7 +2,7 @@ How to build a blog using Pelican - Part III
 ############################################
 
 :date: 2016-01-05 16:00
-:tags: pelican, python
+:tags: pelican, python, travis
 :slug: how-to-build-a-blog-using-pelican-part-III
 
 This is the last post of this series. In the `last post <{filename}/how-to-build-a-blog-using-pelican-part-II.rst>`_ I talked about plugins and tools used to deploy this blog.
