@@ -12,7 +12,7 @@ Today we are going to check what kind of magic trick I am using to get fresh and
 SSH keys
 --------
 
-I am not that kind of crazy-about-security-person but I try to do my best. At work I use SSH keys, two-factor authentication when possible and other security mechanisms. In order to make it easier to write and publish content, we don't want to ask for passwords when deploying our new content to the server - it would not work easily for tables or smartphones, would it?
+I am not that kind of crazy-about-security-person but I try to do my best. At work I use SSH keys, two-factor authentication when possible and other security mechanisms. In order to make it easier to write and publish content, we don't want to ask for passwords when deploying our new content to the server - it would not work easily for tablets or smartphones, would it?
 
 Now you need to generate a pair of SSH keys. Github has a `good tutorial`_ around this topic.
 
