@@ -3,9 +3,9 @@ Your environment is ruining your work
 
 :date: 2015-12-09 21:25
 :tags: work, focus
-:slug: you-environment-is-ruinning-your-work
+:slug: you-environment-is-ruining-your-work
 
-You may not notice but your environment is ruinning your work.
+You may not notice but your environment is ruining your work.
 Every noise, every interruption or even parallel conversations are slowing down your productivity. Which is a bad thing because it is related to your happiness at your job.
 
 Understanding the problem
@@ -22,7 +22,7 @@ How nose is affecting you
 -------------------------
 
 It does not matter what is your job: being interrupted every time can harm your life.
-Take a moment and think: when Monalisa was a work in progress painting, do you imagine Picaso being interrupted to talk about wheter?
+Take a moment and think: when Monalisa was a work in progress painting, do you imagine Picaso being interrupted to talk about weather?
 What about a surgeon? Do you imagine nurses talking about soccer or politics whilst a high risky surgery?
 
 Everytime you lose focus, you lose time. And time is not something you can recover.
