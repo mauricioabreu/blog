@@ -46,7 +46,7 @@ This blog uses 2 plugins: `assets` and `gzip_cache`. Former is a useful plugin t
 
 Note that to use plugins you better have some knowledge of `git submodules`.
 
-In the next post I will talk about the deployment of this blog using Travis CI and how I managed to use SSH key authentication to make deploys after a simple `git push`.
+In the `next post <{filename}/how-to-build-a-blog-using-pelican-part-III.rst>`_ I will talk about the deployment of this blog using Travis CI and how I managed to use SSH key authentication to make deploys after a simple `git push`.
 
 .. _Fabric: http://www.fabfile.org/
 .. _Pelican docs: http://docs.getpelican.com/en/latest/plugins.html
