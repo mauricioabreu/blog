@@ -19,7 +19,7 @@ It is ok! It is hard to figure out what exactly is making you to lose focus. Let
 Noise is a big rock to remove from your path in order to have better productivity, more stuff done and more happiness.
 
 How noise is affecting you
--------------------------
+--------------------------
 
 It does not matter what is your job: being interrupted every time can harm your life.
 Take a moment and think: when Monalisa was a work in progress painting, do you imagine Picaso being interrupted to talk about weather?
