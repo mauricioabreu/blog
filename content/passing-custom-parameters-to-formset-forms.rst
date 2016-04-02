@@ -4,7 +4,6 @@ Passing custom parameters to Django formset forms
 :date: 2016-04-01 19:45
 :tags: django
 :slug: passing-custom-parameters-to-django-formset-forms
-:status: draft
 
 An usual question on sites like StackOverflow is: how do I pass a custom parameter to a formset form?
 
