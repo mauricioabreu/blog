@@ -11,7 +11,7 @@ After some readings I found an article talking about a language called `Crystal`
 
 In this post I will walk through the language features using the TDD process.
 
-Let's start with the testing tool. `Spec`_ is built-in and mimics a lot of aspects of `RSpec`_.
+Let's start with the testing tool. `Spec`_ is built-in and is inspired by `RSpec`_.
 
 Structure of the testing environment
 ------------------------------------
@@ -36,11 +36,11 @@ math_spec.cr:
     require "../src/math.cr"
 
     describe Math do
-        describe "addition" do
-            it "adds two numbers" do
-                addition(1, 1).should eq 2
-            end
+      describe "addition" do
+        it "adds two numbers" do
+          addition(1, 1).should eq 2
         end
+      end
     end
 
 A spec file starts with the `require` directive. It imports packages. Either built-ins or your own code. Since the `src` folder is one level up, we can use relative import making use of dot notation.
@@ -65,7 +65,7 @@ Here is the initial code of our math package:
 .. code-block:: ruby
 
     def addition(number1 : Int, number2 : Int)
-        2
+      2
     end
 
 Here we are defining a function. If you know Python, `def` is very familiar to you. It either defines a function or a method.
@@ -76,7 +76,7 @@ In Crystal it optional to define the type of the arguments being passed in. It m
 .. code-block:: ruby
 
     def addition(number1, number2)
-        2
+      2
     end
 
 Also it is optional to use the `return` statement. If `return` is missing it is assumed that the last line of the function's body is the value being returned.
@@ -95,7 +95,7 @@ Wow! Our test is passing. But wait...we don't have a real implementation, just a
 .. code-block:: ruby
 
     def addition(number1 : Int, number2 : Int)
-        number1 + number2
+      number1 + number2
     end
 
 Voilá! Our code is working fine and it will work for other values too.
