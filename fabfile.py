@@ -70,6 +70,11 @@ def preview():
 def publish():
     """Publish to production via rsync"""
     local('pelican -s publishconf.py')
+    # Upload nginx files and reload
+    put('nginx.conf', '/etc/nginx/nginx.conf', mode=0644, use_sudo=True)
+    put('maugzoide.com.conf', '/etc/nginx/sites-available/maugzoide.com.conf', mode=0644, use_sudo=True)
+    sudo('service nginx reload')
+    # rsync all blog files
     project.rsync_project(
         remote_dir=dest_path,
         exclude=".DS_Store",
