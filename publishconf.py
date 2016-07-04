@@ -8,7 +8,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 
-SITEURL = 'http://blog.maugzoide.com'
+SITEURL = 'https://blog.maugzoide.com'
 RELATIVE_URLS = False
 TIMEZONE = 'America/Sao_Paulo'
 
