@@ -68,4 +68,6 @@ def preview():
 
 def github():
     """Import content to gh-pages branch."""
-    local('ghp-import output -n --cname=www.maugzoide.com')
+    local('touch "" > output/.nojekyll')
+    local('touch "www.maugzoide.com" > output/CNAME')
+    local('ghp-import output')
