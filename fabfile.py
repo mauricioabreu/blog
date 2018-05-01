@@ -64,3 +64,8 @@ def reserve():
 def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
+
+
+def github():
+    """Import content to gh-pages branch."""
+    local('ghp-import output -n --cname=www.maugzoide.com')
