@@ -64,17 +64,3 @@ def reserve():
 def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
-
-
-@hosts(production)
-def publish():
-    """Publish to production via rsync"""
-    local('pelican -s publishconf.py')
-    # rsync all blog files
-    project.rsync_project(
-        remote_dir=dest_path,
-        exclude=".DS_Store",
-        local_dir=DEPLOY_PATH.rstrip('/') + '/',
-        delete=True,
-        extra_opts='-c',
-    )
