@@ -2,6 +2,7 @@ language: python
 sudo: false
 branches:
   only:
+    - gh-pages
     - master
 git:
   submodules: false
