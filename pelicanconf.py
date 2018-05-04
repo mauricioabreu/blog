@@ -6,7 +6,7 @@ SITENAME = u'maugzoide'
 SITETITLE = 'maugzoide'
 SITESUBTITLE = u'people, technology, culture'
 SITELOGO = u'https://www.maugzoide.com/static/profile.png'
-SITEURL = ''
+SITEURL = 'https://www.maugzoide.com'
 
 PATH = 'content'
 
