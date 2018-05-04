@@ -10,7 +10,7 @@ SITEURL = ''
 
 PATH = 'content'
 
-THEME = 'theme'
+THEME = 'pelican-themes/Flex'
 
 MAIN_MENU = True
 
