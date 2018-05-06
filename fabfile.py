@@ -58,6 +58,8 @@ def reserve():
 
 def github():
     """Import content to gh-pages branch."""
+    clean()
+    local('pelican -s publishconf.py')
     local('echo "" > output/.nojekyll')
     local('echo "www.maugzoide.com" > output/CNAME')
     local('ghp-import output')
