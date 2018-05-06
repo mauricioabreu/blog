@@ -56,12 +56,6 @@ def reserve():
     build()
     serve()
 
-
-def preview():
-    """Build production version of site"""
-    local('pelican -s publishconf.py')
-
-
 def github():
     """Import content to gh-pages branch."""
     local('echo "" > output/.nojekyll')
