@@ -12,7 +12,7 @@ MAIN_MENU = True
 MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'))
-FAVICON = SITEURL + '/static/favicon.ico'
+FAVICON = '/static/favicon.ico'
 DEFAULT_PAGINATION = 10
 
 # Content management
