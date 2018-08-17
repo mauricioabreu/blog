@@ -1,6 +1,0 @@
-*.py[cod]
-.vagrant
-.vscode
-cache/
-output/
-env/

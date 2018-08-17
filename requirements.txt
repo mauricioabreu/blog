@@ -1,6 +1,0 @@
-cssmin
-Fabric
-ghp-import
-pelican
-Pygments
-webassets
