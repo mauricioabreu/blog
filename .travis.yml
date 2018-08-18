@@ -1,0 +1,18 @@
+language: minimal
+
+install:
+  - wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.47/hugo_0.47_Linux-64bit.deb
+  - sudo dpkg -i hugo.deb
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  email: $GITHUB_EMAIL
+  name: $GITHUB_USERNAME
+  verbose: true
+  keep-history: true
+  local-dir: public
+  target_branch: gh-pages
+  on:
+    branch: master
