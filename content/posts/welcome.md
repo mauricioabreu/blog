@@ -5,8 +5,6 @@ tags: ["hello world"]
 slug: welcome
 ---
 
-# Welcome
-
 A long time ago I decided that I should have a blog to share my thoughts
 about this kind and cruel world. And it is here now. It was born.
 

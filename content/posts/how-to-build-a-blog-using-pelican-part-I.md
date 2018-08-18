@@ -5,9 +5,6 @@ tags: ["pelican", "python"]
 slug: how-to-build-a-blog-using-pelican-part-I
 ---
 
-How to build a blog using Pelican - Part I
-==========================================
-
 This post is part of a tutorial series showing how I built this blog:
 the stack, tools, workflow and deploy.
 

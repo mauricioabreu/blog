@@ -5,8 +5,6 @@ tags: ["crystal", "tdd"]
 slug: learning-crystal-part-I
 ---
 
-# Learning Crystal - Part I
-
 These days I was reading about the Ruby programming language. I got
 excited of course. It looks pretty cool!
 

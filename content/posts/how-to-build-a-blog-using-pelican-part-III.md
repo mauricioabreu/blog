@@ -5,8 +5,6 @@ tags: ["pelican", "python", "travis"]
 slug: how-to-build-a-blog-using-pelican-part-III
 ---
 
-# How to build a blog using Pelican - Part III
-
 This is the last post of this series. In the last I
 talked about plugins and tools used to deploy this blog.
 

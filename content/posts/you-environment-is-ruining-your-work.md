@@ -5,8 +5,6 @@ tags: ["work", "focus"]
 slug: you-environment-is-ruining-your-work
 ---
 
-# Your environment is ruining your work
-
 You may not notice but your environment is ruining your work. Every
 noise, every interruption or even parallel conversations are slowing
 down your productivity. Which is a bad thing because it is related to

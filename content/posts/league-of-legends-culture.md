@@ -5,8 +5,6 @@ tags: ["culture", "games", "league of legends"]
 slug: league-of-legends-about-the-bad-culture
 ---
 
-# League of Legends - About the bad culture
-
 I have been playing [League of Legends](http://www.leagueoflegends.com)
 (aka LoL) for such a long time. And I play it a lot.
 
@@ -20,8 +18,7 @@ League of Legends community from my perspective. It may sound like a
 rant (is it?) but my words and thoughts have more than 4 years of
 experience.
 
-Why do I still play League of Legends?
---------------------------------------
+## Why do I still play League of Legends?
 
 I enjoy the game. Really!
 
@@ -37,8 +34,7 @@ playing it.
 So why this post? Why am I heading your attention to this? League of
 Legends has a toxic community.
 
-The community
--------------
+## The community
 
 At a first glance the people might appear receptive, kind and lovely but
 after some days you can notice some bad behaviors like racism, sexism,
@@ -60,8 +56,7 @@ or experienced players like me receive.
 
 It puts me down, I am not gonna lie.
 
-How can we help?
-----------------
+## How can we help?
 
 I tried a lot of things through the years: muting, ignoring and getting
 angry. Nothing worked - or will work. One of the things that is working
@@ -81,8 +76,7 @@ the hurt people but also help people discover and recover from their
 mistakes. Remember that it is not a bad thing to recognize your own
 mistakes - the only bad thing here is not being aware of it.
 
-How can Riot Games help?
-------------------------
+## How can Riot Games help?
 
 [Riot Games](http://www.riotgames.com/) is already helping in some way.
 Before starting the game, in the loading screen, some text shows up -
@@ -98,8 +92,7 @@ helping that much. Riot is missing some opportunities here: there could
 be more campaings to enforce good behavior, to help the good people not
 give up - and help the bad people stop doing it.
 
-Don't give up
--------------
+## Don't give up
 
 Not all people want to change. Some of them will agree with you - others
 will try to convince you are the wrong person there, a stupid player

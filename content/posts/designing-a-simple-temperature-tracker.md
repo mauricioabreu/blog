@@ -5,8 +5,6 @@ tags: ["python"]
 slug: designing-a-simple-temperature-tracker
 ---
 
-# Designing a simple temperature tracker
-
 ## What we are going to build
 
 On this post, we well build a temperature tracker together!
