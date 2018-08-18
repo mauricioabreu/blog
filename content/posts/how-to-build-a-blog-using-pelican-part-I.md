@@ -1,17 +1,12 @@
+---
+title: How to build a blog using Pelican - Part I
+date: 2015-12-19
+tags: ["pelican", "python"]
+slug: how-to-build-a-blog-using-pelican-part-I
+---
+
 How to build a blog using Pelican - Part I
 ==========================================
-
-date
-
-:   2015-12-19 16:41
-
-tags
-
-:   pelican, python
-
-slug
-
-:   how-to-build-a-blog-using-pelican-part-I
 
 This post is part of a tutorial series showing how I built this blog:
 the stack, tools, workflow and deploy.
@@ -20,8 +15,7 @@ In case you are wondering, this is a static site. It means every page
 you get is not dynamically generated. It is a bunch of HTML files being
 served to the web.
 
-Pelican
--------
+## Pelican
 
 Pelican is a static site generator written in Python. Pelican has a nice
 set of features. Here is the most important ones:
@@ -38,8 +32,7 @@ back. And it is a good thing!
 Static sites are easier to deploy because you don't need a full stack,
 only a web server serving the static content (HTML, CSS, JS).
 
-How to start
-------------
+## How to start
 
 First you need to install Pelican:
 
@@ -81,8 +74,7 @@ More on how to write content and build a structure (content folders,
 configuration files, static directories) you can read on [Pelican
 docs](http://docs.getpelican.com).
 
-Serving
--------
+## Serving
 
 [nginx](http://nginx.org/) is a good choice to serve your blog. I use
 Ubuntu on my server and to get it up and running was easy like:
@@ -93,8 +85,7 @@ After having nginx running you can change your configuration files to
 your own purposes. Here are an
 [example](https://raw.githubusercontent.com/mauricioabreu/blog/master/maugzoide.com.conf).
 
-Theming
--------
+## Theming
 
 Pelican comes with a default theme. This blog is using
 [Flex](https://github.com/alexandrevicenzi/flex) theme, a clean and

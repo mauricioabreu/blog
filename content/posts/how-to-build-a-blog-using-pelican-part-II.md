@@ -1,21 +1,13 @@
-How to build a blog using Pelican - Part II
-===========================================
+---
+title: How to build a blog using Pelican - Part II
+date: 2015-12-25
+tags: ["pelican", "python"]
+slug: how-to-build-a-blog-using-pelican-part-II
+---
 
-date
+# How to build a blog using Pelican - Part II
 
-:   2015-12-25 19:00
-
-tags
-
-:   pelican, python
-
-slug
-
-:   how-to-build-a-blog-using-pelican-part-II
-
-In the [last
-post](%7Bfilename%7D/how-to-build-a-blog-using-pelican-part-I.rst) I
-showed you a bigger picture of the stack used by this blog. This one is
+In the previous post I showed you a bigger picture of the stack used by this blog. This one is
 to show some tools that make it easier to write, review and deploy it to
 production.
 
@@ -24,8 +16,7 @@ site only running some commands. But if you need a fancier, easier and
 better workflow to frequently deploy content you might install and setup
 other tools.
 
-Fabric
-------
+## Fabric
 
 [Fabric](http://www.fabfile.org/) is a tool designed to turn SSH
 deployment and system administrator tasks trivial.
@@ -62,8 +53,7 @@ folder to your server.
 What does it mean at all? It is the whole set of commands I use
 everytime I blog.
 
-Plugins
--------
+## Plugins
 
 I consider a plugin to be a tool. A tool is something you use to achieve
 a goal. Some tools have a lot of responsabilities, others not so much -
@@ -79,8 +69,6 @@ docs](http://docs.getpelican.com/en/latest/plugins.html).
 Note that to use plugins you better have some knowledge of
 git submodules.
 
-In the [next
-post](%7Bfilename%7D/how-to-build-a-blog-using-pelican-part-III.rst) I
-will talk about the deployment of this blog using Travis CI and how I
+In the next post I will talk about the deployment of this blog using Travis CI and how I
 managed to use SSH key authentication to make deploys after a simple
 git push.

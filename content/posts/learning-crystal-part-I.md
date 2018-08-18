@@ -1,17 +1,11 @@
-Learning Crystal - Part I
-=========================
+---
+title: Learning Crystal - Part I
+date: 2016-05-15
+tags: ["crystal", "tdd"]
+slug: learning-crystal-part-I
+---
 
-date
-
-:   2016-05-15 16:27
-
-tags
-
-:   crystal, tdd
-
-slug
-
-:   learning-crystal-part-I
+# Learning Crystal - Part I
 
 These days I was reading about the Ruby programming language. I got
 excited of course. It looks pretty cool!
@@ -28,8 +22,7 @@ Let's start with the testing tool.
 [Spec](http://crystal-lang.org/api/Spec.html) is built-in and is
 inspired by [RSpec](http://rspec.info/).
 
-Structure of the testing environment
-------------------------------------
+## Structure of the testing environment
 
 First create a folder to hold your project. Give it the name
 tdd-with-crystal for example. Now create two new folders: src and spec.
@@ -43,8 +36,7 @@ looks pretty dummy right? And it is the objective.
 Inside the spec folder, create a file and name it math\_spec.cr. All
 spec files need to have the \_spec suffix.
 
-Writing our first tests
------------------------
+## Writing our first tests
 
 One of the basic principles of TDD is to write the test first. Okay,
 let's write our test suite for our math library.

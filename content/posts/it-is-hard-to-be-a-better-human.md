@@ -1,17 +1,11 @@
-It is hard to be a better human
-===============================
+---
+title: It is hard to be a better human
+date: 2015-11-25
+tags: ["self", "hard things"]
+slug: it-is-hard-to-be-a-better-human
+---
 
-date
-
-:   2015-11-25 21:25
-
-tags
-
-:   self, hard things
-
-slug
-
-:   it-is-hard-to-be-a-better-human
+# It is hard to be a better human
 
 Being a better human being is a hard task. I know it because I try to be
 a better person. Day after day. And I just can't.

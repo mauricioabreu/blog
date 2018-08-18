@@ -1,24 +1,13 @@
-Designing a simple temperature tracker
-======================================
+---
+title: Designing a simple temperature tracker
+date: 2018-05-05
+tags: ["python"]
+slug: designing-a-simple-temperature-tracker
+---
 
-date
+# Designing a simple temperature tracker
 
-:   2018-05-05 14:01
-
-category
-
-:   programming
-
-tags
-
-:   python
-
-slug
-
-:   designing-a-simple-temperature-tracker
-
-What we are going to build
---------------------------
+## What we are going to build
 
 On this post, we well build a temperature tracker together!
 
@@ -232,8 +221,7 @@ git checkout v0.1
 I omitted some pieces of code here but you can always check the
 repository to navigate the code yourself.
 
-Refactoring
------------
+## Refactoring
 
 Now it is time to refactoring our code. It is not that bad but our
 `get_max`, `get_min` functions calls can get expensive when dealing with
