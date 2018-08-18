@@ -1,28 +1,20 @@
-How to build a blog using Pelican - Part III
-============================================
+---
+title: How to build a blog using Pelican - Part III
+date: 2016-01-05
+tags: ["pelican", "python", "travis"]
+slug: how-to-build-a-blog-using-pelican-part-III
+---
 
-date
+# How to build a blog using Pelican - Part III
 
-:   2016-01-05 16:00
-
-tags
-
-:   pelican, python, travis
-
-slug
-
-:   how-to-build-a-blog-using-pelican-part-III
-
-This is the last post of this series. In the [last
-post](%7Bfilename%7D/how-to-build-a-blog-using-pelican-part-II.rst) I
+This is the last post of this series. In the last I
 talked about plugins and tools used to deploy this blog.
 
 Today we are going to check what kind of magic trick I am using to get
 fresh and updated content after a simple git push. In resume it uses
 [Travis CI](https://travis-ci.org/) and SSH authentication.
 
-SSH keys
---------
+## SSH keys
 
 I am not that kind of crazy-about-security-person but I try to do my
 best. At work I use SSH keys, two-factor authentication when possible
@@ -63,8 +55,7 @@ file to repository.
 **Don't ever publish your rsa\_file to the upstream. After being visible
 to other you are by yourself.**
 
-Travis CI
----------
+## Travis CI
 
 Travis CI is a continuous integration platform. It is an easy to use
 online tool that provides a backend infrastructure to test and deploy
@@ -118,8 +109,7 @@ script is the part where we tell which commands need to run in order to
 achieve our goal: generate the static content and publish it using
 Fabric.
 
-Conclusion
-----------
+## Conclusion
 
 I hope you have learned something on this series. Leave a comment if you
 have any questions on how to setup a blog using Pelican.

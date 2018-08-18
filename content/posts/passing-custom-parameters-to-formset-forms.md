@@ -1,17 +1,11 @@
-Passing custom parameters to Django formset forms
-=================================================
+---
+title: Passing custom parameters to Django formset forms
+date: 2016-04-0
+tags: ["django"]
+slug: passing-custom-parameters-to-django-formset-forms
+---
 
-date
-
-:   2016-04-01 19:45
-
-tags
-
-:   django
-
-slug
-
-:   passing-custom-parameters-to-django-formset-forms
+# Passing custom parameters to Django formset forms
 
 An usual question on sites like StackOverflow is: how do I pass a custom
 parameter to a formset form?
@@ -22,8 +16,7 @@ constructions.
 
 Let's say we have an app with two models: Author and Book.
 
-The problem
------------
+## The problem
 
 I want to make it possible for the users of my product to add new books
 on my site. But the price can only be added or updated by superusers
@@ -36,8 +29,7 @@ This is why I am writing this post and created a repository with a
 project to demonstrate how it actually works. You can [read the code
 here](https://github.com/mauricioabreu/formset_custom_arguments).
 
-The solution
-------------
+## The solution
 
 This is one of the best solutions I have ever encountered.
 
@@ -58,8 +50,7 @@ BookFormset.form = staticmethod(
 )
 ```
 
-Why does it work?
------------------
+## Why does it work?
 
 The first part of the code creates a formset relating two models and
 uses a custom form.
@@ -87,8 +78,7 @@ return type(form)(class_name, (form,), form_class_attrs)
 After passing a function as a form object, it will call our curryed
 function, creating a new form with our custom parameters.
 
-A different approach
---------------------
+## A different approach
 
 Carl Meyer, Django core developer, has a different style of doing this.
 See [this answer](http://stackoverflow.com/a/624013) at StackOverflow.

@@ -1,17 +1,11 @@
-League of Legends - About the bad culture
-=========================================
+---
+title: League of Legends - About the bad culture
+date: 2016-01-10
+tags: ["culture", "games", "league of legends"]
+slug: league-of-legends-about-the-bad-culture
+---
 
-date
-
-:   2016-01-10 17:45
-
-tags
-
-:   culture, games, league of legends
-
-slug
-
-:   league-of-legends-about-the-bad-culture
+# League of Legends - About the bad culture
 
 I have been playing [League of Legends](http://www.leagueoflegends.com)
 (aka LoL) for such a long time. And I play it a lot.
