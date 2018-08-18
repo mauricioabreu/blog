@@ -1,5 +1,6 @@
 baseURL = "https://www.maugzoide.com/"
 languageCode = "en-us"
+title = "Mauricio Antunes"
 
 theme = "hyde-hyde"
 
@@ -14,3 +15,4 @@ theme = "hyde-hyde"
 [params.social]
     github = "mauricioabreu"
     twitter = "maugzoide"
+    linkedin = "mauricio-abreu-antunes-3ba52013"
