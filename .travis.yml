@@ -6,7 +6,7 @@ install:
   - rm -rf public 2> /dev/null
 
 script:
-  - hugo
+  - hugo -v
   - echo "www.maugzoide.com" > public/CNAME
 
 deploy:
