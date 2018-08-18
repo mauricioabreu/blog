@@ -1,3 +1,12 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.maugzoide.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+
+theme = "hyde-hyde"
+
+[params]
+    author = "Maurício Antunes"
+    title = "hello people"
+    description = "people, technology, culture"
+    authorimage = "/img/profile.png"
+    highlightjs = true
+    highlightjsstyle = "github"
