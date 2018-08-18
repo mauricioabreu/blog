@@ -27,15 +27,14 @@ We also have some constraints:
 -   Minimum and maximum must return integer results
 -   Mean must return a float
 
-Coding
-------
+## Coding
 
 All the code listed here can be found at:
 <https://github.com/mauricioabreu/temperature_tracker>
 
 Okay, let's build some code, starting with the tests:
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 import unittest
 
 class TestTemperatureTracker(unittest.TestCase):
@@ -46,13 +45,13 @@ class TestTemperatureTracker(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
+{{</ highlight >}}
 
 We can run our tests by executing the file using the Python interpreter:
 
-``` {.sourceCode .bash}
+{{< highlight python >}}
 python tracker.py
-```
+{{</ highlight >}}
 
 We still don't have the TemperatureTracker object, neither the insert
 function, this is why our testes failed. TemperatureTracker is a
@@ -60,12 +59,12 @@ container, it must keep a track of all temperatures added. It indicates
 that we need a collection to save all our records. Since we don't need
 to save or retrieve it using keys, we use a list.
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 class TemperatureTracker(object):
 
     def __init__(self):
         self.temperatures = []
-```
+{{</ highlight >}}
 
 `TemperatureTracker` is now our container. It is responsible to validate
 and add the temperature to the `temperatures` attribute. Also it will
@@ -73,7 +72,7 @@ tell us the `min`, `max` and `mean` values.
 
 Let's define the `insert` function now:
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 class TemperatureTracker(object):
 
     def __init__(self):
@@ -85,7 +84,7 @@ class TemperatureTracker(object):
         the order from the most recent to the oldest temperature."""
         # Record the temperature
         self.temperatures.append(temperature)
-```
+{{</ highlight >}}
 
 We can run our tests again and check if our test is passing, even if our
 test does not assert for specific results. Sometimes it is hard to test
@@ -97,7 +96,7 @@ a list by overriding the
 object method. It is necessary because we can access the temperatures
 like accessing list elements:
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 class TemperatureTracker(object):
 
     def __init__(self):
@@ -119,14 +118,14 @@ temperature_tracker = TemperatureTracker()
 temperature_tracker.insert(22)
 # Get last temperature was added
 temperature_tracker[-1]
-```
+{{</ highlight >}}
 
 Then we get back to our test and add specific asserts to check if the
 temperature added can be retrieved.
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 self.assertEqual(temperature_tracker[-1], 22)
-```
+{{</ highlight >}}
 
 It is working!
 
@@ -134,7 +133,7 @@ There are some constraints we must obey, right? Temperature must be
 integer and the value must be between 0 and 100. Let's add code to
 validate the temperature being inserted.
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 class InvalidTemperature(Exception):
     """Raise when an invalid temperature is
     added to the tracker."""
@@ -183,7 +182,7 @@ class TestTemperatureTracker(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
+{{</ highlight >}}
 
 Here I decoupled the validation function from the insert method because:
 
@@ -197,11 +196,11 @@ We have our `insert` method tested and working.
 function. We can use the built-in `max` and `min` functions to get it
 working. For the `get_mean` case we use the mean calculation below:
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 def get_mean(self) -> float:
     """Return the mean temperature tracked."""
     return sum(self.temperatures) / len(self.temperatures)
-```
+{{</ highlight >}}
 
 Python 3 returns a float when dividing two integer values. For Python 2
 one of the values must be float or we can use the
@@ -213,10 +212,10 @@ the tag v0.1
 
 `Tags` point to a specific commit in history. You can checkout to them:
 
-``` {.sourceCode .bash}
+{{< highlight bash >}}
 git fetch --tags    
 git checkout v0.1
-```
+{{</ highlight >}}
 
 I omitted some pieces of code here but you can always check the
 repository to navigate the code yourself.
@@ -231,7 +230,7 @@ must check every element of the list to know the maximum value.
 
 Let's read the other functions:
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 def get_max(self):
     """Return the maximum temperature tracked."""
     return max(self.temperatures)
@@ -239,21 +238,21 @@ def get_max(self):
 def get_min(self):
     """Return the minimum temperature tracked."""
     return min(self.temperatures)
-```
+{{</ highlight >}}
 
 They recalculate these values everytime we call the functions. What if
 we save the `max` and `min` values when inserting the temperature?
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 temperature_tracker = TemperatureTracker()
 temperature_tracker.insert(1) # 1 is the maximum value now
 temperature_tracker.insert(3) # 3 is the maximum vaue now
 temperature_tracker.insert(2) # 3 is still the maximum value
-```
+{{</ highlight >}}
 
 Let's refactor the `insert` function:
 
-``` {.sourceCode .python}
+{{< highlight python >}}
 class TemperatureTracker(object):
 
     def __init__(self):
@@ -283,7 +282,7 @@ class TemperatureTracker(object):
         if not self.min_temperature or temperature < self.min_temperature:
             self.min_temperature = temperature
         return self.min_temperature
-```
+{{</ highlight >}}
 
 We added two new functions: `set_max` and `set_min`. They behave like a
 cache, a way to save a result value to save machine processing.
@@ -294,10 +293,10 @@ we calculate the values, **we did not introduce any new feature**.
 
 All the refactored code can be read after checking out the tag v0.2:
 
-``` {.sourceCode .bash}
+{{< highlight bash >}}
 git fetch --tags    
 git checkout v0.2
-```
+{{</ highlight >}}
 
 That is all! This code has space for more improvements. If you have
 anything to comment, please, go ahead. I am open to discuss every point
