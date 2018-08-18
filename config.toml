@@ -10,3 +10,7 @@ theme = "hyde-hyde"
     authorimage = "/img/profile.png"
     highlightjs = true
     highlightjsstyle = "github"
+
+[params.social]
+    github = "mauricioabreu"
+    twitter = "maugzoide"
