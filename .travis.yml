@@ -1,5 +1,8 @@
 language: minimal
 
+before_install:
+    - git submodule update --init --recursive
+
 install:
   - wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.47/hugo_0.47_Linux-64bit.deb
   - sudo dpkg -i hugo.deb
