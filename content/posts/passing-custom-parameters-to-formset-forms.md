@@ -1,6 +1,6 @@
 ---
 title: Passing custom parameters to Django formset forms
-date: 2016-04-0
+date: 2016-04-01
 tags: ["django"]
 slug: passing-custom-parameters-to-django-formset-forms
 ---
