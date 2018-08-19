@@ -1,18 +1,31 @@
 baseURL = "https://www.maugzoide.com/"
-languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "Mauricio Antunes"
+paginate = 3
+theme = "jane"
 
-theme = "hyde-hyde"
+[author] 
+    name = "Maurício Antunes"
+
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5
+    filename = "sitemap.xml"
+
+[[menu.main]]
+    name = "Home"
+    weight = 10
+    identifier = "home"
+    url = "/"
 
 [params]
-    author = "Maurício Antunes"
     title = "hello people"
     description = "people, technology, culture"
-    authorimage = "/img/profile.png"
-    highlightjs = true
-    highlightjsstyle = "github"
+    since = "2015"
+    moreMeta = true
 
 [params.social]
-    github = "mauricioabreu"
-    twitter = "maugzoide"
-    linkedin = "mauricio-abreu-antunes-3ba52013"
+    a-github = "https://github.com/mauricioabreu"
+    b-twitter = "https://twitter.com/maugzoide"
+    c-email = "mailto:mauricio.abreua@gmail.com"
+    
