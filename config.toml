@@ -3,6 +3,7 @@ defaultContentLanguage = "en"
 title = "Mauricio Antunes"
 paginate = 3
 theme = "jane"
+disqusShortname = "maugzoide"
 
 [author] 
     name = "Maurício Antunes"
