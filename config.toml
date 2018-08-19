@@ -4,6 +4,9 @@ title = "Mauricio Antunes"
 paginate = 3
 theme = "jane"
 disqusShortname = "maugzoide"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
 
 [author] 
     name = "Maurício Antunes"
