@@ -22,6 +22,12 @@ pygmentsCodefencesGuessSyntax = true
     identifier = "home"
     url = "/"
 
+[[menu.main]]
+    name = "Tags"
+    weight = 20
+    identifier = "tags"
+    url = "/tags/"
+
 [params]
     title = "hello people"
     description = "people, technology, culture"
