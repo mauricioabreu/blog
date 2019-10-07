@@ -1,15 +1,47 @@
-baseURL = "https://www.maugzoide.com/"
+baseurl = "https://www.maugzoide.com/"
+title = "Maurício Antunes"
+theme = "hugo-coder"
+languagecode = "en"
 defaultContentLanguage = "en"
-title = "Mauricio Antunes"
-paginate = 3
-theme = "jane"
-disqusShortname = "maugzoide"
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
 
-[author] 
-    name = "Maurício Antunes"
+paginate = 3
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "maugzoide"
+
+[params] 
+    author = "Maurício Antunes"
+    info = "Software developer"
+    description = "Maurício Antunes personal website"
+    keywords = "blog,software,personal"
+    avatarurl = "img/we.png"
+    footercontent = "Removing code makes me happy"
+    inverted = false
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "http://github.com/mauricioabreu/"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 2
+    url = "https://twitter.com/maugzoide/"
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 3
+    url = "https://www.linkedin.com/in/mauricio-abreu-antunes-3ba52013/"
 
 [sitemap]
     changefreq = "weekly"
@@ -23,18 +55,18 @@ pygmentsCodefencesGuessSyntax = true
     url = "/"
 
 [[menu.main]]
-    name = "Tags"
+    name = "Posts"
     weight = 20
+    identifier = "posts"
+    url = "/post/"
+
+[[menu.main]]
+    name = "Tags"
+    weight = 30
     identifier = "tags"
     url = "/tags/"
 
-[params]
-    title = "hello people"
-    description = "people, technology, culture"
-    since = "2015"
-    moreMeta = true
-
-[params.social]
+[[params.social]]
     a-github = "https://github.com/mauricioabreu"
     b-twitter = "https://twitter.com/maugzoide"
     c-linkedin = "https://www.linkedin.com/in/mauricio-abreu-antunes-3ba52013"
