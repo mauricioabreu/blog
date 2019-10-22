@@ -7,7 +7,7 @@ defaultContentLanguage = "en"
 paginate = 3
 canonifyurls = true
 
-pygmentsstyle = "b2"
+pygmentsstyle = "fruity"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
