@@ -43,7 +43,7 @@ disqusShortname = "maugzoide"
     name = "LinkedIn"
     icon = "fab fa-linkedin"
     weight = 3
-    url = "https://www.linkedin.com/in/mauricio-abreu-antunes-3ba52013/"
+    url = "https://www.linkedin.com/in/maurício-antunes-3ba52013/"
 
 [sitemap]
     changefreq = "weekly"
@@ -67,10 +67,3 @@ disqusShortname = "maugzoide"
     weight = 30
     identifier = "tags"
     url = "/tags/"
-
-[[params.social]]
-    a-github = "https://github.com/mauricioabreu"
-    b-twitter = "https://twitter.com/maugzoide"
-    c-linkedin = "https://www.linkedin.com/in/maur%C3%ADcio-antunes-3ba52013/"
-    d-email = "mailto:mauricio.abreua@gmail.com"
-    
