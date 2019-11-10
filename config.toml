@@ -23,6 +23,7 @@ disqusShortname = "maugzoide"
     favicon_16 = "/img/favicon-16x16.png"
     footercontent = "Removing code makes me happy"
     inverted = false
+    custom_css = ["css/custom.css"]
 
 [taxonomies]
   category = "categories"
