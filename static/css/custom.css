@@ -17,3 +17,37 @@ h6 {
   margin-left: 2.0rem;
   margin-right: 0;
 }
+
+.content {
+  flex: 1;
+  margin-top: 7.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.post-title {
+  margin-bottom: .75em;
+}
+
+.posted-on {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.reading-time {
+  display: inline-block;
+}
+
+.about-avatar {
+  display: block;
+  float: none;
+  width: 250px;
+  max-width: 40%;
+  padding: 5px;
+  margin-bottom: 0;
+  @media(min-width: 632px) {
+    float: left;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+}
