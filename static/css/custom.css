@@ -24,6 +24,10 @@ h6 {
   margin-bottom: 1.6rem;
 }
 
+.list ul li .title {
+  font-weight: 100;
+}
+
 .post-title {
   margin-bottom: .75em;
 }
