@@ -12,12 +12,6 @@ h6 {
   text-transform: none;
 }
 
-.navigation-item a, span {
-  font-weight: 500;
-  margin-left: 2.0rem;
-  margin-right: 0;
-}
-
 .content {
   flex: 1;
   margin-top: 7.6rem;
