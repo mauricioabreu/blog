@@ -64,7 +64,7 @@ docker run --net="host" --rm -v $(pwd):/files jrottenberg/ffmpeg -hide_banner \
     -window_size 5  -extra_window_size 10 -remove_at_exit 1 -adaptation_sets "id=0,streams=v id=1,streams=a" -f flv rtmp://localhost:1935/stream/colors
 ```
 
-Executing this command will ingest a video colored video to test our server.
+Executing this command will ingest a colored video to test our server.
 
 There is a lot going on there but the most important part is the very end: rtmp://localhost:1935/stream/colors
 
