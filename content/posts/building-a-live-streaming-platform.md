@@ -71,7 +71,7 @@ There is a lot going on there but the most important part is the very end: rtmp:
 This is the RTMP address of our server. Let's break it into pieces so we can understand it better:
 
 * **1935** - default RTMP port;
-* **live** - application name described in our NGINX configuration;
+* **stream** - application name described in our NGINX configuration;
 * **colors** - streaming name.
 
 Now it is time to test our stream by watching it. You can use [VLC](https://www.videolan.org/) to watch it. **VLC** is an open source software to reproduce a wide variety of media, compatible with most of existent codecs.
