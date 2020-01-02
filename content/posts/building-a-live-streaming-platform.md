@@ -29,7 +29,19 @@ But where does it go? A server.
 There is a variety of protocols used to ingest video. You can use HTTP or the new SRT protocol. For this series of posts we will
 use **RTMP** (Real-Time Messaging Protocol), solid, widely used and based on TCP. Developed by Macromedia, it was used in the old Flash player.
 
-#### Bulding a server
+#### A bit about RTMP
+
+RTMP is an L7 (application layer) protocol. It has some variations like **RTMPS** (Security) and **RTMPE** (Encrypted). They are not the same thing. Although both have the same goals, RTMPS uses SSL certificates while RTMPE uses standard cryptographic algorithms to generate a pair of keys so the client and the server can encrypt and decrypt the data being transmitted.
+
+RTMP works over TCP, which means it guarantees packet delivery and missed packets will be retransmitted. It can also be a bad thing for live streaming because problems like network congestion will cause a delay in your streaming.
+
+Since RTMP is old and it does not receive any specification updates, it does not support modern audio and video codes.
+
+It is not a big deal, though. With RTMP you can stream video with **H.264** (video) and **AAC** (audio). These codecs are widely used.
+
+In the past, RTMP was also used for playback. And it is almost impossible now, given the high number of people watching a streaming. A good strategy is to used RTMP to receive the streaming (ingest) and serve the playlists and chunks using [HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) or [DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) so you can have a CDN on top of it. 
+
+### Bulding a server
 
 *Before moving on, I recommend you to [clone the repository](https://github.com/mauricioabreu/building-a-live-streaming-platform) containing all assets to run the following commands.*
 
@@ -44,8 +56,7 @@ And some other features that can be checked [here](https://github.com/arut/nginx
 To ease our job, we can use a Docker image to have a RTMP server up and running.
 
 ```
-docker pull alfg/nginx-rtmp
-docker run --net="host" -it -p 1935:1935 -p 8080:80 --rm alfg/nginx-rtmp
+make runserver
 ```
 
 These commands will download the Docker image and start a NGINX-RTMP server ready to receive our live content.
@@ -53,15 +64,7 @@ These commands will download the Docker image and start a NGINX-RTMP server read
 Now we have to publish some live content. Let's generate a video using ffmpeg, sending it to our RTMP server.
 
 ```
-docker run --net="host" --rm -v $(pwd):/files jrottenberg/ffmpeg -hide_banner \
-    -re -f lavfi -i "testsrc2=size=1280x720:rate=30" -pix_fmt yuv420p \
-    -c:v libx264 -x264opts keyint=30:min-keyint=30:scenecut=-1 \
-    -tune zerolatency -profile:v high -preset veryfast -bf 0 -refs 3 \
-    -b:v 1400k -bufsize 1400k \
-    -vf "drawtext=fontfile='/files/fonts/OpenSans-Bold.ttf':text='%{localtime}:box=1:fontcolor=black:boxcolor=white:fontsize=100':x=40:y=400'" \
-    -utc_timing_url "https://time.akamai.com/?iso" -use_timeline 0 -media_seg_name 'chunk-stream-$RepresentationID$-$Number%05d$.m4s' \
-    -init_seg_name 'init-stream1-$RepresentationID$.m4s' \
-    -window_size 5  -extra_window_size 10 -remove_at_exit 1 -adaptation_sets "id=0,streams=v id=1,streams=a" -f flv rtmp://localhost:1935/stream/colors
+make ingest
 ```
 
 Executing this command will ingest a colored video to test our server.
