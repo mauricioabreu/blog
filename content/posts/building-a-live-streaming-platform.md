@@ -5,18 +5,18 @@ tags: ["live-streaming"]
 slug: building-a-live-streaming-platform-part-i
 ---
 
-Have you ever got yourself thinking how live streaming technology works?
+Have you ever got yourself thinking how live streaming works?
 
 This post is a guide to build your own live streaming platform. After reading and following the examples
 included on this post, you will be able to publish your content live.
 
 ## How live streaming works
 
-If you use or know Youtube, you probably had contact with a live video transmited over the web.
+If you consume videos on Youtube, you probably already had contact with a live video transmited over the web.
 
-Most of Youtube content is on demand (VoD) but today we see a lot of people streaming games, news, shows and all other stuff with their smartphones or notebooks.
+Most of Youtube content is on demand (VoD) but today we see a lot of people streaming games, news, shows and all kinds of stuff with their smartphones or notebooks.
 
-But how does this happen? How our recording goes through the internet and get views around the world?
+But how does this happen? How our recording goes through the internet and gets views around the world?
 
 ### Ingest
 
@@ -35,11 +35,11 @@ RTMP is an L7 (application layer) protocol. It has some variations like **RTMPS*
 
 RTMP works over TCP, which means it guarantees packet delivery and missed packets will be retransmitted. It can also be a bad thing for live streaming because problems like network congestion will cause a delay in your streaming.
 
-Since RTMP is old and it does not receive any specification updates, it does not support modern audio and video codes.
+Since RTMP is old and it does not receive any specification updates, it does not support modern audio and video codecs.
 
-It is not a big deal, though. With RTMP you can stream video with **H.264** (video) and **AAC** (audio). These codecs are widely used.
+It is not a big deal, though. With RTMP you can stream videos with **H.264** (video) and **AAC** (audio). These codecs are widely used.
 
-In the past, RTMP was also used for playback. And it is almost impossible now, given the high number of people watching a streaming. A good strategy is to used RTMP to receive the streaming (ingest) and serve the playlists and chunks using [HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) or [DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) so you can have a CDN on top of it. 
+In the past, RTMP was also used for playback. And it is almost impossible now given the high number of people simultaneously watching a streaming. A good strategy is to use RTMP to receive the streaming (ingest) and serve the playlists and chunks using [HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) or [DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) so you can have a CDN on top of it. 
 
 ### Bulding a server
 
