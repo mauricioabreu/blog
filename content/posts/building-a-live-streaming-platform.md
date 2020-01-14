@@ -1,6 +1,6 @@
 ---
 title: Building a live streaming platform, part I
-date: 2019-10-22
+date: 2019-12-22
 tags: ["live-streaming"]
 slug: building-a-live-streaming-platform-part-i
 ---
@@ -86,5 +86,14 @@ Open your VLC, go to "Open media", choose "Network" and paste http://localhost:8
 If everything is ok, you will see something like this:
 
 {{< figure src="/img/colors.jpg" width="50%" >}}
+
+### Resources
+
+Here is a list of links to improve your knowledge of video streaming:
+
+* [Streaming onboarding](https://github.com/Eyevinn/streaming-onboarding)
+* [Intro video concepts and ffmpeg (until Bonus Round: Adaptive Streaming)](https://github.com/leandromoreira/ffmpeg-libav-tutorial)
+* [Coursera: Fundamentals of Digital Image and Video Processing](https://www.coursera.org/learn/digital)
+* [Digital video introduction](https://github.com/leandromoreira/digital_video_introduction)
 
 Thank you for reading. Wait you in the next episode.
