@@ -43,7 +43,7 @@ In the past, RTMP was also used for playback. And it is almost impossible now gi
 
 ### Bulding a server
 
-*Before moving on, I recommend you to [clone the repository](https://github.com/mauricioabreu/building-a-live-streaming-platform) containing all assets to run the following commands.*
+*Before moving on, I recommend you to [clone the repository](https://github.com/mauricioabreu/building-a-live-streaming-platform) containing all assets to run the following commands. Use the 0.1.0 tag (git checkout 0.1.0)*
 
 Now we already know the protocol we will use, we need a server to receive our video. If you ever heard about nginx, you need to know **NGINX-RTMP**, a RTMP streaming server based on NGINX. With this server you can:
 
