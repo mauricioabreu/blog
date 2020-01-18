@@ -5,6 +5,11 @@ tags: ["live-streaming"]
 slug: building-a-live-streaming-platform-part-i
 ---
 
+* **Building a live streaming platform, part I**
+* **[Building a live streaming platform, part II](https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/)**
+
+---
+
 Have you ever got yourself thinking how live streaming works?
 
 This post is a guide to build your own live streaming platform. After reading and following the examples

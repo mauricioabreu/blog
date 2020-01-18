@@ -5,6 +5,11 @@ tags: ["live-streaming"]
 slug: building-a-live-streaming-platform-part-ii
 ---
 
+* **[Building a live streaming platform, part I](https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/)**
+* **Building a live streaming platform, part II**
+
+---
+
 This post is the second in the *Building a live streaming platform* series.
 
 We well cover more information about NGINX-RTMP, adding a way to authorize specific people to stream in our platform.
