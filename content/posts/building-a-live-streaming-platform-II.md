@@ -83,7 +83,7 @@ Our configuration is bigger but the snippet above focus on the authorization cal
 
 When we start to ingest a new streaming (using ffmpeg or OBS Studio) the server will hit the endpoint. If the response status is **2xx** it will accept the connection. Other errors like **4xx** will deny and close the connection.
 
-#### Streaming using OBS Studio
+### Streaming using OBS Studio
 
 [OBS Studio](https://obsproject.com/) is a software designed for video recording and live streaming.
 
