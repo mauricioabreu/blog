@@ -92,3 +92,5 @@ After downloading and opening it, go to *Settings -> Stream*. The next screen wi
 {{< figure src="/img/stream-settings.png" width="100%" >}}
 
 If you typed everything right, you won't be receiving error messages. You can also analyze your containers applications logs.
+
+Just like in the first time we used VLC to watch our stream at http://localhost:8080/live/foo.m3u8, we can use it again. This time you won't see a colored video with a tone in the background but your webcam's view from seconds ago - *it doesn't need to be now be live*.
