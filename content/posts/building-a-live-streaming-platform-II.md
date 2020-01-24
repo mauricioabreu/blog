@@ -94,3 +94,12 @@ After downloading and opening it, go to *Settings -> Stream*. The next screen wi
 If you typed everything right, you won't be receiving error messages. You can also analyze your containers applications logs.
 
 Just like in the first time we used VLC to watch our stream at http://localhost:8080/live/foo.m3u8, we can use it again. This time you won't see a colored video with a tone in the background but your webcam's view from seconds ago - *it doesn't need to be now be live*.
+
+### Improving our authorization system
+
+Our current authorization workflow works, right? But it does not look simple as it could be.
+We have a username and a password. Why don't we just have a secure random key?
+
+To achieve it our repository received a few changes to remove the *psk* parameter, leaving just the *name*, expecting it to be password/hash key.
+
+Checkout the [0.2.1 tag](https://github.com/mauricioabreu/building-a-live-streaming-platform/tree/0.2.1) to get an extended version of our authorization feature.
