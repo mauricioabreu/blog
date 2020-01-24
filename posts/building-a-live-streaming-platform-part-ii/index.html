@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Maurício Antunes">
+    <meta name="description" content="Maurício Antunes personal website">
+    <meta name="keywords" content="blog,software,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building a live streaming platform, part II"/>
+<meta name="twitter:description" content="Building a live streaming platform, part I Building a live streaming platform, part II  This post is the second in the Building a live streaming platform series.
+We well cover more information about NGINX-RTMP, adding a way to authorize specific people to stream in our platform.
+Youtube, Facebook and Twitch use a stream key to match your identity. Are you itself streaming this new video game?
+Authorizing streamings From the point of view of a server, you are a publisher if you configured your software to stream your content, be it recorded (previously recorded media on live channels) or live (your notebook or smartphone camera)."/>
+
+    <meta property="og:title" content="Building a live streaming platform, part II" />
+<meta property="og:description" content="Building a live streaming platform, part I Building a live streaming platform, part II  This post is the second in the Building a live streaming platform series.
+We well cover more information about NGINX-RTMP, adding a way to authorize specific people to stream in our platform.
+Youtube, Facebook and Twitch use a stream key to match your identity. Are you itself streaming this new video game?
+Authorizing streamings From the point of view of a server, you are a publisher if you configured your software to stream your content, be it recorded (previously recorded media on live channels) or live (your notebook or smartphone camera)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/" />
+<meta property="article:published_time" content="2020-01-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-06T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/">
+    
+    <title>
+  Building a live streaming platform, part II · Maurício Antunes
+</title>
+
+    
+      <link rel="canonical" href="https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.maugzoide.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.maugzoide.com/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.maugzoide.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.maugzoide.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.maugzoide.com/">
+      Maurício Antunes
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/posts/">Posts</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/tags/">Tags</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Building a live streaming platform, part II</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-01-06T00:00:00Z'>
+                January 6, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.maugzoide.com/tags/live-streaming/">live-streaming</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<ul>
+<li><strong><a href="https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/">Building a live streaming platform, part I</a></strong></li>
+<li><strong>Building a live streaming platform, part II</strong></li>
+</ul>
+
+<hr />
+
+<p>This post is the second in the <em>Building a live streaming platform</em> series.</p>
+
+<p>We well cover more information about NGINX-RTMP, adding a way to authorize specific people to stream in our platform.</p>
+
+<p>Youtube, Facebook and Twitch use a <em>stream key</em> to match your identity. Are you itself streaming this new video game?</p>
+
+<h2 id="authorizing-streamings">Authorizing streamings</h2>
+
+<p>From the point of view of a server, you are a <strong>publisher</strong> if you configured your software to stream your content, be it recorded (previously recorded media on live channels) or live (your notebook or smartphone camera).</p>
+
+<p>To publish your content you must be authorized to do that. Big platforms have their own ways to accomplish it, like using a key. If you <em>gamer123</em> is yourself, we must check if that key you have is the same as ours.</p>
+
+<p>What we need here is something to let only authorized people to use our service. Let&rsquo;s build a web application to get this done.</p>
+
+<h3 id="the-web-application">The web application</h3>
+
+<p><em>Before moving on, I recommend you to <a href="https://github.com/mauricioabreu/building-a-live-streaming-platform">clone the repository</a> containing all assets to run the following commands. Use the 0.2.0 tag (git checkout 0.2.0)</em></p>
+
+<p>Our web application is simple. Not because it is easy - it is simple because it starts with one endpoint only: <em>auth</em></p>
+
+<p>To start the application execute:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make run-live
+make create-db</code></pre></div>
+<p>It will start a webserver running on port 9090, NGINX-RTMP on 1935 and create a <em>SQLite</em> database.</p>
+
+<p>To use <em>/auth</em> we need to use POST method and pass two fields, name and psk. <em>name</em> is the streaming name and <em>psk</em> is the secret key:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -XPOST -H <span style="color:#0086d2">&#34;Accept: application/json&#34;</span> -H <span style="color:#0086d2">&#34;Content-Type: application/x-www-form-urlencoded&#34;</span> http://localhost:9090/auth -d <span style="color:#0086d2">&#34;name=foos&amp;psk=bar&#34;</span></code></pre></div>
+<p>It will fail because we don&rsquo;t have a user yet. Let&rsquo;s manually enter SQLite consolea and perform a SQL statement to create a new <em>account</em>:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sqlite live.db</code></pre></div>
+<p>Type the following statement on the console:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#fb660a;font-weight:bold">insert</span> <span style="color:#fb660a;font-weight:bold">into</span> publishers (name, <span style="color:#fb660a;font-weight:bold">key</span>) <span style="color:#fb660a;font-weight:bold">values</span> (<span style="color:#0086d2">&#39;foo&#39;</span>, <span style="color:#0086d2">&#39;bar&#39;</span>);</code></pre></div>
+<p>Execute the HTTP POST again and you will see you are authorized. This request is very similar to the one NGINX-RTMP will do, except it will run on every new published streaming. To add authorization to our streaming platform we need to set and understand some NGINX-RTMP directives.</p>
+
+<h3 id="understanding-nginx-rtmp-configuration">Understanding NGINX-RTMP configuration</h3>
+
+<p>Our <a href="https://github.com/mauricioabreu/docker-nginx-rtmp/blob/master/nginx.conf">RTMP configuration</a> is big and has some key points.</p>
+
+<div class="highlight"><div style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#fb660a;font-weight:bold">rtmp</span> { <span style="color:#080;background-color:#0f140f;font-style:italic"># start a block to define RTMP settings inside nginx.conf
+</span><span style="color:#080;background-color:#0f140f;font-style:italic"></span>    <span style="color:#fb660a;font-weight:bold">server</span> {
+        <span style="color:#fb660a;font-weight:bold">listen</span> <span style="color:#0086f7;font-weight:bold">1935</span>; <span style="color:#080;background-color:#0f140f;font-style:italic"># port to accept RTMP connections
+</span><span style="color:#080;background-color:#0f140f;font-style:italic"></span>        <span style="color:#fb660a;font-weight:bold">notify_method</span> <span style="color:#0086d2">post</span>; <span style="color:#080;background-color:#0f140f;font-style:italic"># HTTP method for callback notifications
+</span><span style="color:#080;background-color:#0f140f;font-style:italic"></span>
+        <span style="color:#fb660a;font-weight:bold">application</span> <span style="color:#0086d2">stream</span> { <span style="color:#080;background-color:#0f140f;font-style:italic"># &#34;stream&#34; in rtmp://localhost:1935/stream/colors
+</span><span style="color:#080;background-color:#0f140f;font-style:italic"></span>            <span style="color:#fb660a;font-weight:bold">live</span> <span style="color:#0086d2">on</span>;
+            <span style="color:#fb660a;font-weight:bold">on_publish</span> <span style="color:#0086d2">http://localhost:9090/auth</span>; <span style="color:#080;background-color:#0f140f;font-style:italic"># authorization callback
+</span><span style="color:#080;background-color:#0f140f;font-style:italic"></span>        }
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Our configuration is bigger but the snippet above focus on the authorization callback, the <em>on_publish</em> event.</p>
+
+<p><em>on_publish</em> is a server event generated every time a new streaming starts to be published. This event gives us the chance to deny the incoming streaming if we think it is malicious.</p>
+
+<p>When we start to ingest a new streaming (using ffmpeg or OBS Studio) the server will hit the endpoint. If the response status is <strong>2xx</strong> it will accept the connection. Other errors like <strong>4xx</strong> will deny and close the connection.</p>
+
+<h3 id="streaming-using-obs-studio">Streaming using OBS Studio</h3>
+
+<p><a href="https://obsproject.com/">OBS Studio</a> is a software designed for video recording and live streaming.</p>
+
+<p>After downloading and opening it, go to <em>Settings -&gt; Stream</em>. The next screen will come with fields to configure our streaming.</p>
+
+<figure>
+    <img src="https://www.maugzoide.com/img/stream-settings.png" width="100%"/> 
+</figure>
+
+
+<p>If you typed everything right, you won&rsquo;t be receiving error messages. You can also analyze your containers applications logs.</p>
+
+<p>Just like in the first time we used VLC to watch our stream at <a href="http://localhost:8080/live/foo.m3u8">http://localhost:8080/live/foo.m3u8</a>, we can use it again. This time you won&rsquo;t see a colored video with a tone in the background but your webcam&rsquo;s view from seconds ago - <em>it doesn&rsquo;t need to be now be live</em>.</p>
+
+<h3 id="improving-our-authorization-system">Improving our authorization system</h3>
+
+<p>Our current authorization workflow works, right? But it does not look simple as it could be.
+We have a username and a password. Why don&rsquo;t we just have a secure random key?</p>
+
+<p>To achieve it our repository received a few changes to remove the <em>psk</em> parameter, leaving just the <em>name</em>, expecting it to be password/hash key.</p>
+
+<p>Checkout the <a href="https://github.com/mauricioabreu/building-a-live-streaming-platform/tree/0.2.1">0.2.1 tag</a> to get an extended version of our authorization feature.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "maugzoide" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Removing code makes me happy</p>
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

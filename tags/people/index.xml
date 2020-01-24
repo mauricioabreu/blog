@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>people on Maurício Antunes</title>
+    <link>https://www.maugzoide.com/tags/people/</link>
+    <description>Recent content in people on Maurício Antunes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maugzoide.com/tags/people/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First day at Globo.com</title>
+      <link>https://www.maugzoide.com/posts/first-day-at-globo-com/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/first-day-at-globo-com/</guid>
+      <description>New job, new challenges Today was my first day at globo.com
+It was awesome! I learned a lot of stuff today and had so many friendly welcome messages coming from my coworkers. I hope I can help the people there to evolve, learning and teaching with them.</description>
+    </item>
+    
+  </channel>
+</rss>

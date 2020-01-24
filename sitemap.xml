@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.maugzoide.com/about/</loc>
+    <lastmod>2018-08-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/live-streaming/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/</loc>
+    <lastmod>2019-12-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/carrer/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/first-day-at-globo-com/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/people/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/work/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/designing-a-simple-temperature-tracker/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/python/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/crystal/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/learning-crystal-part-i/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/tdd/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/django/</loc>
+    <lastmod>2016-04-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/passing-custom-parameters-to-django-formset-forms/</loc>
+    <lastmod>2016-04-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/culture/</loc>
+    <lastmod>2016-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/games/</loc>
+    <lastmod>2016-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/league-of-legends/</loc>
+    <lastmod>2016-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/league-of-legends-about-the-bad-culture/</loc>
+    <lastmod>2016-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-iii/</loc>
+    <lastmod>2016-01-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/pelican/</loc>
+    <lastmod>2016-01-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/travis/</loc>
+    <lastmod>2016-01-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-ii/</loc>
+    <lastmod>2015-12-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-i/</loc>
+    <lastmod>2015-12-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/focus/</loc>
+    <lastmod>2015-12-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/you-environment-is-ruining-your-work/</loc>
+    <lastmod>2015-12-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/hard-things/</loc>
+    <lastmod>2015-11-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/it-is-hard-to-be-a-better-human/</loc>
+    <lastmod>2015-11-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/self/</loc>
+    <lastmod>2015-11-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/tags/hello-world/</loc>
+    <lastmod>2015-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/posts/welcome/</loc>
+    <lastmod>2015-11-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maugzoide.com/series/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

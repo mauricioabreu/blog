@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maurício Antunes</title>
+    <link>https://www.maugzoide.com/</link>
+    <description>Recent content on Maurício Antunes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maugzoide.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://www.maugzoide.com/about/</link>
+      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/about/</guid>
+      <description>Hello,
+Thanks for visiting my website.
+Here I write about: people, technology and culture.
+I have been a professional developer since 2010 (Python, golang). I spend most of my time solving lots of problems in my daily job. My spare time is precious and I happily spend it talking to my wife Lais and my very supportive family.</description>
+    </item>
+    
+    <item>
+      <title>Building a live streaming platform, part II</title>
+      <link>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/</guid>
+      <description>Building a live streaming platform, part I Building a live streaming platform, part II  This post is the second in the Building a live streaming platform series.
+We well cover more information about NGINX-RTMP, adding a way to authorize specific people to stream in our platform.
+Youtube, Facebook and Twitch use a stream key to match your identity. Are you itself streaming this new video game?
+Authorizing streamings From the point of view of a server, you are a publisher if you configured your software to stream your content, be it recorded (previously recorded media on live channels) or live (your notebook or smartphone camera).</description>
+    </item>
+    
+    <item>
+      <title>Building a live streaming platform, part I</title>
+      <link>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/</guid>
+      <description>Building a live streaming platform, part I Building a live streaming platform, part II  Have you ever got yourself thinking how live streaming works?
+This post is a guide to build your own live streaming platform. After reading and following the examples included on this post, you will be able to publish your content live.
+How live streaming works If you consume videos on Youtube, you probably already had contact with a live video transmited over the web.</description>
+    </item>
+    
+    <item>
+      <title>First day at Globo.com</title>
+      <link>https://www.maugzoide.com/posts/first-day-at-globo-com/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/first-day-at-globo-com/</guid>
+      <description>New job, new challenges Today was my first day at globo.com
+It was awesome! I learned a lot of stuff today and had so many friendly welcome messages coming from my coworkers. I hope I can help the people there to evolve, learning and teaching with them.</description>
+    </item>
+    
+    <item>
+      <title>Designing a simple temperature tracker</title>
+      <link>https://www.maugzoide.com/posts/designing-a-simple-temperature-tracker/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/designing-a-simple-temperature-tracker/</guid>
+      <description>What we are going to build On this post, we well build a temperature tracker together!
+A temperature tracker is a device that keeps track of all monitored temperatures that have been collected. Our temperature tracker is responsible from:
+ Insert a temperature Return the maximum temperature we have seen so far Return the minimum temperature we have seen so far Return the mean temperature we have seen so far  We also have some constraints:</description>
+    </item>
+    
+    <item>
+      <title>Learning Crystal - Part I</title>
+      <link>https://www.maugzoide.com/posts/learning-crystal-part-i/</link>
+      <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/learning-crystal-part-i/</guid>
+      <description>These days I was reading about the Ruby programming language. I got excited of course. It looks pretty cool!
+After some readings I found an article talking about a language called Crystal. I got very surprised by the goals the community behind the language is seeking: from a syntax similar to Ruby to efficient compiled native code.
+In this post I will walk through the language features using the TDD process.</description>
+    </item>
+    
+    <item>
+      <title>Passing custom parameters to Django formset forms</title>
+      <link>https://www.maugzoide.com/posts/passing-custom-parameters-to-django-formset-forms/</link>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/passing-custom-parameters-to-django-formset-forms/</guid>
+      <description>An usual question on sites like StackOverflow is: how do I pass a custom parameter to a formset form?
+You will end up finding lots of ways to do it. But the most used (at least the more reasonable answer) uses some hard to understand constructions.
+Let&amp;rsquo;s say we have an app with two models: Author and Book.
+The problem I want to make it possible for the users of my product to add new books on my site.</description>
+    </item>
+    
+    <item>
+      <title>League of Legends - About the bad culture</title>
+      <link>https://www.maugzoide.com/posts/league-of-legends-about-the-bad-culture/</link>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/league-of-legends-about-the-bad-culture/</guid>
+      <description>I have been playing League of Legends (aka LoL) for such a long time. And I play it a lot.
+It puzzles me whether I am losing or earning time with this.
+For those who don&amp;rsquo;t know the game I am talking about, it is (usually) a 5 x 5 game where you need to destroy the enemy base to win.
+In this post I will mostly talk about the toxic culture around the League of Legends community from my perspective.</description>
+    </item>
+    
+    <item>
+      <title>How to build a blog using Pelican - Part III</title>
+      <link>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-iii/</link>
+      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-iii/</guid>
+      <description>This is the last post of this series. In the last I talked about plugins and tools used to deploy this blog.
+Today we are going to check what kind of magic trick I am using to get fresh and updated content after a simple git push. In resume it uses Travis CI and SSH authentication.
+SSH keys I am not that kind of crazy-about-security-person but I try to do my best.</description>
+    </item>
+    
+    <item>
+      <title>How to build a blog using Pelican - Part II</title>
+      <link>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-ii/</link>
+      <pubDate>Fri, 25 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-ii/</guid>
+      <description>In the previous post I showed you a bigger picture of the stack used by this blog. This one is to show some tools that make it easier to write, review and deploy it to production.
+Pelican is very useful alone. You can write and deploy content to your site only running some commands. But if you need a fancier, easier and better workflow to frequently deploy content you might install and setup other tools.</description>
+    </item>
+    
+    <item>
+      <title>How to build a blog using Pelican - Part I</title>
+      <link>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-i/</link>
+      <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-i/</guid>
+      <description>This post is part of a tutorial series showing how I built this blog: the stack, tools, workflow and deploy.
+In case you are wondering, this is a static site. It means every page you get is not dynamically generated. It is a bunch of HTML files being served to the web.
+Pelican Pelican is a static site generator written in Python. Pelican has a nice set of features. Here is the most important ones:</description>
+    </item>
+    
+    <item>
+      <title>Your environment is ruining your work</title>
+      <link>https://www.maugzoide.com/posts/you-environment-is-ruining-your-work/</link>
+      <pubDate>Wed, 09 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/you-environment-is-ruining-your-work/</guid>
+      <description>You may not notice but your environment is ruining your work. Every noise, every interruption or even parallel conversations are slowing down your productivity. Which is a bad thing because it is related to your happiness at your job.
+Understanding the problem Ok, you get up early and go to your job. You say &amp;ldquo;good morning&amp;rdquo; to your coleagues, get some coffee, seat, turn on your computer and yay, you are working.</description>
+    </item>
+    
+    <item>
+      <title>It is hard to be a better human</title>
+      <link>https://www.maugzoide.com/posts/it-is-hard-to-be-a-better-human/</link>
+      <pubDate>Wed, 25 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/it-is-hard-to-be-a-better-human/</guid>
+      <description>Being a better human being is a hard task. I know it because I try to be a better person. Day after day. And I just can&amp;rsquo;t.
+Of course I would love to write a long post about how I evolved from a disgusting to an awesome person people like to speak with. I am not this kind of person.
+But yeah, take note: I am getting better at it.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>https://www.maugzoide.com/posts/welcome/</link>
+      <pubDate>Mon, 23 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/welcome/</guid>
+      <description>A long time ago I decided that I should have a blog to share my thoughts about this kind and cruel world. And it is here now. It was born.
+When younger (about 8 years ago) I had a blog I used to share opinions about music and myself. And that was a very good experiencie which helped me evolve as a human being.
+Welcome to my blog.</description>
+    </item>
+    
+  </channel>
+</rss>

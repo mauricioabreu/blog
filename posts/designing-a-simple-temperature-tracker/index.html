@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Maurício Antunes">
+    <meta name="description" content="Maurício Antunes personal website">
+    <meta name="keywords" content="blog,software,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Designing a simple temperature tracker"/>
+<meta name="twitter:description" content="What we are going to build On this post, we well build a temperature tracker together!
+A temperature tracker is a device that keeps track of all monitored temperatures that have been collected. Our temperature tracker is responsible from:
+ Insert a temperature Return the maximum temperature we have seen so far Return the minimum temperature we have seen so far Return the mean temperature we have seen so far  We also have some constraints:"/>
+
+    <meta property="og:title" content="Designing a simple temperature tracker" />
+<meta property="og:description" content="What we are going to build On this post, we well build a temperature tracker together!
+A temperature tracker is a device that keeps track of all monitored temperatures that have been collected. Our temperature tracker is responsible from:
+ Insert a temperature Return the maximum temperature we have seen so far Return the minimum temperature we have seen so far Return the mean temperature we have seen so far  We also have some constraints:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maugzoide.com/posts/designing-a-simple-temperature-tracker/" />
+<meta property="article:published_time" content="2018-05-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-05T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.maugzoide.com/posts/designing-a-simple-temperature-tracker/">
+    
+    <title>
+  Designing a simple temperature tracker · Maurício Antunes
+</title>
+
+    
+      <link rel="canonical" href="https://www.maugzoide.com/posts/designing-a-simple-temperature-tracker/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.maugzoide.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.maugzoide.com/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.maugzoide.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.maugzoide.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.maugzoide.com/">
+      Maurício Antunes
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/posts/">Posts</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/tags/">Tags</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Designing a simple temperature tracker</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2018-05-05T00:00:00Z'>
+                May 5, 2018
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              6 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.maugzoide.com/tags/python/">python</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<h2 id="what-we-are-going-to-build">What we are going to build</h2>
+
+<p>On this post, we well build a temperature tracker together!</p>
+
+<p>A temperature tracker is a device that keeps track of all monitored
+temperatures that have been collected. Our temperature tracker is
+responsible from:</p>
+
+<ul>
+<li>Insert a temperature</li>
+<li>Return the maximum temperature we have seen so far</li>
+<li>Return the minimum temperature we have seen so far</li>
+<li>Return the mean temperature we have seen so far</li>
+</ul>
+
+<p>We also have some constraints:</p>
+
+<ul>
+<li>A temperature must be an integer number</li>
+<li>It must be between 0 and 100 Fahrenheit scale</li>
+<li>Minimum and maximum must return integer results</li>
+<li>Mean must return a float</li>
+</ul>
+
+<h2 id="coding">Coding</h2>
+
+<p>All the code listed here can be found at:
+<a href="https://github.com/mauricioabreu/temperature_tracker">https://github.com/mauricioabreu/temperature_tracker</a></p>
+
+<p>Okay, let&rsquo;s build some code, starting with the tests:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">import</span> unittest
+
+<span style="color:#fb660a;font-weight:bold">class</span> TestTemperatureTracker(unittest.TestCase):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">test_insert</span>(self):
+        temperature_tracker = TemperatureTracker()
+        temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">22</span>)
+
+<span style="color:#fb660a;font-weight:bold">if</span> __name__ == <span style="color:#0086d2">&#39;__main__&#39;</span>:
+    unittest.main()</code></pre></div>
+
+<p>We can run our tests by executing the file using the Python interpreter:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python tracker.py</code></pre></div>
+
+<p>We still don&rsquo;t have the TemperatureTracker object, neither the insert
+function, this is why our testes failed. TemperatureTracker is a
+container, it must keep a track of all temperatures added. It indicates
+that we need a collection to save all our records. Since we don&rsquo;t need
+to save or retrieve it using keys, we use a list.</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">class</span> TemperatureTracker(object):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> __init__(self):
+        self.temperatures = []</code></pre></div>
+
+<p><code>TemperatureTracker</code> is now our container. It is responsible to validate
+and add the temperature to the <code>temperatures</code> attribute. Also it will
+tell us the <code>min</code>, <code>max</code> and <code>mean</code> values.</p>
+
+<p>Let&rsquo;s define the <code>insert</code> function now:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">class</span> TemperatureTracker(object):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> __init__(self):
+        self.temperatures = []
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">insert</span>(self, temperature: int) -&gt; None:
+        <span style="color:#0086d2">&#34;&#34;&#34;Insert a new temperature on the tracker.
+</span><span style="color:#0086d2">        It is added in the end the collection, keeping
+</span><span style="color:#0086d2">        the order from the most recent to the oldest temperature.&#34;&#34;&#34;</span>
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Record the temperature</span>
+        self.temperatures.append(temperature)</code></pre></div>
+
+<p>We can run our tests again and check if our test is passing, even if our
+test does not assert for specific results. Sometimes it is hard to test
+functions that mutate some data. Did you ever find yourself testing if
+the last object inserted into the database was there by querying it?
+Since we are dealing with lists, we can make our container to look like
+a list by overriding the
+<a href="https://docs.python.org/3.6/reference/datamodel.html#object.__getitem__">__getitem__</a>
+object method. It is necessary because we can access the temperatures
+like accessing list elements:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">class</span> TemperatureTracker(object):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> __init__(self):
+        self.temperatures = []
+
+    <span style="color:#fb660a;font-weight:bold">def</span> __getitem__(self, index: int) -&gt; int:
+        <span style="color:#0086d2">&#34;&#34;&#34;Return the element in the given index.
+</span><span style="color:#0086d2">        This function overrides the list indexing protocol.
+</span><span style="color:#0086d2">        Example:
+</span><span style="color:#0086d2">            &gt;&gt;&gt; temperature_tracker = TemperatureTracker()
+</span><span style="color:#0086d2">            &gt;&gt;&gt; temperature_tracker.insert(15)
+</span><span style="color:#0086d2">            &gt;&gt;&gt; temperature_tracker[0]
+</span><span style="color:#0086d2">            &gt;&gt;&gt; 15
+</span><span style="color:#0086d2">        &#34;&#34;&#34;</span>
+        <span style="color:#fb660a;font-weight:bold">return</span> self.temperatures[index]
+
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Instantiate our TemperatureTracker object</span>
+temperature_tracker = TemperatureTracker()
+temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">22</span>)
+<span style="color:#080;background-color:#0f140f;font-style:italic"># Get last temperature was added</span>
+temperature_tracker[-<span style="color:#0086f7;font-weight:bold">1</span>]</code></pre></div>
+
+<p>Then we get back to our test and add specific asserts to check if the
+temperature added can be retrieved.</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">self.assertEqual(temperature_tracker[-<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">22</span>)</code></pre></div>
+
+<p>It is working!</p>
+
+<p>There are some constraints we must obey, right? Temperature must be
+integer and the value must be between 0 and 100. Let&rsquo;s add code to
+validate the temperature being inserted.</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">class</span> InvalidTemperature(Exception):
+    <span style="color:#0086d2">&#34;&#34;&#34;Raise when an invalid temperature is
+</span><span style="color:#0086d2">    added to the tracker.&#34;&#34;&#34;</span>
+    <span style="color:#fb660a;font-weight:bold">pass</span>
+
+<span style="color:#fb660a;font-weight:bold">class</span> TemperatureTracker(object):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> __init__(self):
+        self.temperatures = []
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">insert</span>(self, temperature: int) -&gt; None:
+        <span style="color:#0086d2">&#34;&#34;&#34;Insert a new temperature on the tracker.
+</span><span style="color:#0086d2">        It is added in the end the collection, keeping
+</span><span style="color:#0086d2">        the order from the most recent to the oldest temperature.&#34;&#34;&#34;</span>
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Check temperature value</span>
+        self.validate_temperature(temperature)
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Record the temperature</span>
+        self.temperatures.append(temperature)
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">validate_temperature</span>(self, temperature: int) -&gt; None:
+        <span style="color:#0086d2">&#34;&#34;&#34;Check if the temperature is a valid value.&#34;&#34;&#34;</span>
+        <span style="color:#fb660a;font-weight:bold">if</span> (temperature &lt; <span style="color:#0086f7;font-weight:bold">0</span> or temperature &gt; <span style="color:#0086f7;font-weight:bold">100</span>) or not isinstance(temperature, int):
+            <span style="color:#fb660a;font-weight:bold">raise</span> InvalidTemperature(
+                <span style="color:#0086d2">&#39;Temperature must be an integer between 0 and 100&#39;</span>)
+
+<span style="color:#fb660a;font-weight:bold">class</span> TestTemperatureTracker(unittest.TestCase):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">test_insert</span>(self):
+        temperature_tracker = TemperatureTracker()
+        temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">22</span>)
+        self.assertEqual(temperature_tracker[-<span style="color:#0086f7;font-weight:bold">1</span>], <span style="color:#0086f7;font-weight:bold">22</span>)
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">test_insert_with_invalid_temperature</span>(self):
+        temperature_tracker = TemperatureTracker()
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Insert a value that is too low...</span>
+        <span style="color:#fb660a;font-weight:bold">with</span> self.assertRaises(InvalidTemperature):
+            temperature_tracker.insert(-<span style="color:#0086f7;font-weight:bold">3</span>)
+
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Insert a value that is too high...</span>
+        <span style="color:#fb660a;font-weight:bold">with</span> self.assertRaises(InvalidTemperature):
+            temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">101</span>)
+
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Insert a non-integer value...</span>
+        <span style="color:#fb660a;font-weight:bold">with</span> self.assertRaises(InvalidTemperature):
+            temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">3.0</span>)
+
+<span style="color:#fb660a;font-weight:bold">if</span> __name__ == <span style="color:#0086d2">&#39;__main__&#39;</span>:
+    unittest.main()</code></pre></div>
+
+<p>Here I decoupled the validation function from the insert method because:</p>
+
+<ul>
+<li>Easier to test</li>
+<li>Easier to understand</li>
+<li>Can be reused when needed</li>
+</ul>
+
+<p>We have our <code>insert</code> method tested and working.</p>
+
+<p><code>get_max</code>, <code>get_min</code> and <code>get_mean</code> are simpler than the <code>insert</code>
+function. We can use the built-in <code>max</code> and <code>min</code> functions to get it
+working. For the <code>get_mean</code> case we use the mean calculation below:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">get_mean</span>(self) -&gt; float:
+    <span style="color:#0086d2">&#34;&#34;&#34;Return the mean temperature tracked.&#34;&#34;&#34;</span>
+    <span style="color:#fb660a;font-weight:bold">return</span> sum(self.temperatures) / len(self.temperatures)</code></pre></div>
+
+<p>Python 3 returns a float when dividing two integer values. For Python 2
+one of the values must be float or we can use the
+<a href="https://www.python.org/dev/peps/pep-0238/">pep0238</a> to return the true
+division in the whole module it is being imported.</p>
+
+<p>As already mentioned, this first version of the code is on Github under
+the tag v0.1</p>
+
+<p><code>Tags</code> point to a specific commit in history. You can checkout to them:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --tags    
+git checkout v0.1</code></pre></div>
+
+<p>I omitted some pieces of code here but you can always check the
+repository to navigate the code yourself.</p>
+
+<h2 id="refactoring">Refactoring</h2>
+
+<p>Now it is time to refactoring our code. It is not that bad but our
+<code>get_max</code>, <code>get_min</code> functions calls can get expensive when dealing with
+large lists. Calling <code>max</code> on a list with 10 elements and 10.000
+elements is very different. <code>max</code> is O(n) which means the implementation
+must check every element of the list to know the maximum value.</p>
+
+<p>Let&rsquo;s read the other functions:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">get_max</span>(self):
+    <span style="color:#0086d2">&#34;&#34;&#34;Return the maximum temperature tracked.&#34;&#34;&#34;</span>
+    <span style="color:#fb660a;font-weight:bold">return</span> max(self.temperatures)
+
+<span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">get_min</span>(self):
+    <span style="color:#0086d2">&#34;&#34;&#34;Return the minimum temperature tracked.&#34;&#34;&#34;</span>
+    <span style="color:#fb660a;font-weight:bold">return</span> min(self.temperatures)</code></pre></div>
+
+<p>They recalculate these values everytime we call the functions. What if
+we save the <code>max</code> and <code>min</code> values when inserting the temperature?</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">temperature_tracker = TemperatureTracker()
+temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">1</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># 1 is the maximum value now</span>
+temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">3</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># 3 is the maximum vaue now</span>
+temperature_tracker.insert(<span style="color:#0086f7;font-weight:bold">2</span>) <span style="color:#080;background-color:#0f140f;font-style:italic"># 3 is still the maximum value</span></code></pre></div>
+
+<p>Let&rsquo;s refactor the <code>insert</code> function:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fb660a;font-weight:bold">class</span> TemperatureTracker(object):
+
+    <span style="color:#fb660a;font-weight:bold">def</span> __init__(self):
+        self.temperatures = []
+        self.max_temperature = None
+        self.min_temperature = None
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">insert</span>(self, temperature: int) -&gt; None:
+        <span style="color:#0086d2">&#34;&#34;&#34;Insert a new temperature on the tracker.
+</span><span style="color:#0086d2">        It is added in the end the collection, keeping
+</span><span style="color:#0086d2">        the order from the most recent to the oldest temperature.&#34;&#34;&#34;</span>
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Check temperature value</span>
+        self.validate_temperature(temperature)
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Record the temperature</span>
+        self.temperatures.append(temperature)
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Set maximum temperature</span>
+        self.set_max(temperature)
+        <span style="color:#080;background-color:#0f140f;font-style:italic"># Set minimum temperature</span>
+        self.set_min(temperature)
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">set_max</span>(self, temperature):
+        <span style="color:#fb660a;font-weight:bold">if</span> not self.max_temperature or temperature &gt; self.max_temperature:
+            self.max_temperature = temperature
+        <span style="color:#fb660a;font-weight:bold">return</span> self.max_temperature
+
+    <span style="color:#fb660a;font-weight:bold">def</span> <span style="color:#ff0086;font-weight:bold">set_min</span>(self, temperature):
+        <span style="color:#fb660a;font-weight:bold">if</span> not self.min_temperature or temperature &lt; self.min_temperature:
+            self.min_temperature = temperature
+        <span style="color:#fb660a;font-weight:bold">return</span> self.min_temperature</code></pre></div>
+
+<p>We added two new functions: <code>set_max</code> and <code>set_min</code>. They behave like a
+cache, a way to save a result value to save machine processing.</p>
+
+<p>After running the tests, we can see that all them passed. This happens
+because we already tested our code, and refactoring only changed <strong>how</strong>
+we calculate the values, <strong>we did not introduce any new feature</strong>.</p>
+
+<p>All the refactored code can be read after checking out the tag v0.2:</p>
+
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --tags    
+git checkout v0.2</code></pre></div>
+
+<p>That is all! This code has space for more improvements. If you have
+anything to comment, please, go ahead. I am open to discuss every point
+of this article. Share with others if you found it useful.</p>
+
+<p>Bye!</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "maugzoide" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Removing code makes me happy</p>
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

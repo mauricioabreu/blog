@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>live-streaming on Maurício Antunes</title>
+    <link>https://www.maugzoide.com/tags/live-streaming/</link>
+    <description>Recent content in live-streaming on Maurício Antunes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maugzoide.com/tags/live-streaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a live streaming platform, part II</title>
+      <link>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-ii/</guid>
+      <description>Building a live streaming platform, part I Building a live streaming platform, part II  This post is the second in the Building a live streaming platform series.
+We well cover more information about NGINX-RTMP, adding a way to authorize specific people to stream in our platform.
+Youtube, Facebook and Twitch use a stream key to match your identity. Are you itself streaming this new video game?
+Authorizing streamings From the point of view of a server, you are a publisher if you configured your software to stream your content, be it recorded (previously recorded media on live channels) or live (your notebook or smartphone camera).</description>
+    </item>
+    
+    <item>
+      <title>Building a live streaming platform, part I</title>
+      <link>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/building-a-live-streaming-platform-part-i/</guid>
+      <description>Building a live streaming platform, part I Building a live streaming platform, part II  Have you ever got yourself thinking how live streaming works?
+This post is a guide to build your own live streaming platform. After reading and following the examples included on this post, you will be able to publish your content live.
+How live streaming works If you consume videos on Youtube, you probably already had contact with a live video transmited over the web.</description>
+    </item>
+    
+  </channel>
+</rss>

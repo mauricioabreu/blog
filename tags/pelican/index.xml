@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pelican on Maurício Antunes</title>
+    <link>https://www.maugzoide.com/tags/pelican/</link>
+    <description>Recent content in pelican on Maurício Antunes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maugzoide.com/tags/pelican/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to build a blog using Pelican - Part III</title>
+      <link>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-iii/</link>
+      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-iii/</guid>
+      <description>This is the last post of this series. In the last I talked about plugins and tools used to deploy this blog.
+Today we are going to check what kind of magic trick I am using to get fresh and updated content after a simple git push. In resume it uses Travis CI and SSH authentication.
+SSH keys I am not that kind of crazy-about-security-person but I try to do my best.</description>
+    </item>
+    
+    <item>
+      <title>How to build a blog using Pelican - Part II</title>
+      <link>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-ii/</link>
+      <pubDate>Fri, 25 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-ii/</guid>
+      <description>In the previous post I showed you a bigger picture of the stack used by this blog. This one is to show some tools that make it easier to write, review and deploy it to production.
+Pelican is very useful alone. You can write and deploy content to your site only running some commands. But if you need a fancier, easier and better workflow to frequently deploy content you might install and setup other tools.</description>
+    </item>
+    
+    <item>
+      <title>How to build a blog using Pelican - Part I</title>
+      <link>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-i/</link>
+      <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/how-to-build-a-blog-using-pelican-part-i/</guid>
+      <description>This post is part of a tutorial series showing how I built this blog: the stack, tools, workflow and deploy.
+In case you are wondering, this is a static site. It means every page you get is not dynamically generated. It is a bunch of HTML files being served to the web.
+Pelican Pelican is a static site generator written in Python. Pelican has a nice set of features. Here is the most important ones:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tdd on Maurício Antunes</title>
+    <link>https://www.maugzoide.com/tags/tdd/</link>
+    <description>Recent content in tdd on Maurício Antunes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maugzoide.com/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Crystal - Part I</title>
+      <link>https://www.maugzoide.com/posts/learning-crystal-part-i/</link>
+      <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/learning-crystal-part-i/</guid>
+      <description>These days I was reading about the Ruby programming language. I got excited of course. It looks pretty cool!
+After some readings I found an article talking about a language called Crystal. I got very surprised by the goals the community behind the language is seeking: from a syntax similar to Ruby to efficient compiled native code.
+In this post I will walk through the language features using the TDD process.</description>
+    </item>
+    
+  </channel>
+</rss>

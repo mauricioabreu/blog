@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>django on Maurício Antunes</title>
+    <link>https://www.maugzoide.com/tags/django/</link>
+    <description>Recent content in django on Maurício Antunes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maugzoide.com/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Passing custom parameters to Django formset forms</title>
+      <link>https://www.maugzoide.com/posts/passing-custom-parameters-to-django-formset-forms/</link>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maugzoide.com/posts/passing-custom-parameters-to-django-formset-forms/</guid>
+      <description>An usual question on sites like StackOverflow is: how do I pass a custom parameter to a formset form?
+You will end up finding lots of ways to do it. But the most used (at least the more reasonable answer) uses some hard to understand constructions.
+Let&amp;rsquo;s say we have an app with two models: Author and Book.
+The problem I want to make it possible for the users of my product to add new books on my site.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Maurício Antunes">
+    <meta name="description" content="Maurício Antunes personal website">
+    <meta name="keywords" content="blog,software,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learning Crystal - Part I"/>
+<meta name="twitter:description" content="These days I was reading about the Ruby programming language. I got excited of course. It looks pretty cool!
+After some readings I found an article talking about a language called Crystal. I got very surprised by the goals the community behind the language is seeking: from a syntax similar to Ruby to efficient compiled native code.
+In this post I will walk through the language features using the TDD process."/>
+
+    <meta property="og:title" content="Learning Crystal - Part I" />
+<meta property="og:description" content="These days I was reading about the Ruby programming language. I got excited of course. It looks pretty cool!
+After some readings I found an article talking about a language called Crystal. I got very surprised by the goals the community behind the language is seeking: from a syntax similar to Ruby to efficient compiled native code.
+In this post I will walk through the language features using the TDD process." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maugzoide.com/posts/learning-crystal-part-i/" />
+<meta property="article:published_time" content="2016-05-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-05-15T00:00:00+00:00" />
+
+
+    
+      <base href="https://www.maugzoide.com/posts/learning-crystal-part-i/">
+    
+    <title>
+  Learning Crystal - Part I · Maurício Antunes
+</title>
+
+    
+      <link rel="canonical" href="https://www.maugzoide.com/posts/learning-crystal-part-i/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://www.maugzoide.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://www.maugzoide.com/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://www.maugzoide.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.maugzoide.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://www.maugzoide.com/">
+      Maurício Antunes
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/">Home</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/posts/">Posts</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/tags/">Tags</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://www.maugzoide.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Learning Crystal - Part I</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2016-05-15T00:00:00Z'>
+                May 15, 2016
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://www.maugzoide.com/tags/crystal/">crystal</a>
+      <span class="separator">•</span>
+    <a href="https://www.maugzoide.com/tags/tdd/">tdd</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<p>These days I was reading about the Ruby programming language. I got
+excited of course. It looks pretty cool!</p>
+
+<p>After some readings I found an article talking about a language called
+<a href="http://crystal-lang.org/">Crystal</a>. I got very surprised by the goals
+the community behind the language is seeking: from a syntax similar to
+Ruby to efficient compiled native code.</p>
+
+<p>In this post I will walk through the language features using the TDD
+process.</p>
+
+<p>Let&rsquo;s start with the testing tool.
+<a href="http://crystal-lang.org/api/Spec.html">Spec</a> is built-in and is
+inspired by <a href="http://rspec.info/">RSpec</a>.</p>
+
+<h2 id="structure-of-the-testing-environment">Structure of the testing environment</h2>
+
+<p>First create a folder to hold your project. Give it the name
+tdd-with-crystal for example. Now create two new folders: src and spec.
+src is where our feature code will be located. spec is where ours tests
+will stay.</p>
+
+<p>To start easy, we are going to write a math library which has very basic
+functions like: addition, subtraction, multiplication and division. It
+looks pretty dummy right? And it is the objective.</p>
+
+<p>Inside the spec folder, create a file and name it math_spec.cr. All
+spec files need to have the _spec suffix.</p>
+
+<h2 id="writing-our-first-tests">Writing our first tests</h2>
+
+<p>One of the basic principles of TDD is to write the test first. Okay,
+let&rsquo;s write our test suite for our math library.</p>
+
+<p>math_spec.cr:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sourceCode .ruby" data-lang=".sourceCode .ruby">require &#34;spec&#34;
+require &#34;../src/math.cr&#34;
+
+describe Math do
+  describe &#34;addition&#34; do
+    it &#34;adds two numbers&#34; do
+      addition(1, 1).should eq 2
+    end
+  end
+end</code></pre></div>
+<p>A spec file starts with the require directive. It imports packages.
+Either built-ins or your own code. Since the src folder is one level up,
+we can use relative import making use of dot notation.</p>
+
+<p>The following lines are part of the Spec DSL. describe can be a class or
+a string and is used to group similar tests. In our example, Math could
+be anything else but to be more clear we give it a proper name. it is
+used to tell the reason why the test exists. it has the same goal of a
+Python test name like test_addition_with_two_numbers. Inside the it
+context we call the function and match our expectations. should is like
+the assert, dividing the calling function of the expected result. eq
+works like the ==. Spec has a lot different matchers just like Python
+unittest has lots of different assert statements.</p>
+
+<p>Now we have a test we need to run it. You can either run crystal spec in
+the same level of the spec folder or run crystal math_spec.cr. Here is
+the output:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sourceCode .shell" data-lang=".sourceCode .shell">Error in ./spec/math_spec.cr:7: undefined method &#39;addition&#39;
+
+        addition(1, 1).should eq 3</code></pre></div>
+<p>Ops! It looks like we don&rsquo;t have the addition implementation yet.</p>
+
+<p>Okay, it is time to code our math package.</p>
+
+<p>Create a file inside the src folder and name it math.cr. Here is the
+initial code of our math package:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sourceCode .ruby" data-lang=".sourceCode .ruby">def addition(number1 : Int, number2 : Int)
+  2
+end</code></pre></div>
+<p>Here we are defining a function. If you know Python, def is very
+familiar to you. It either defines a function or a method. Following the
+TDD guidelines, we are starting with a hardcoded value.</p>
+
+<p>In Crystal it optional to define the type of the arguments being passed
+in. It means we could rewrite our addition function this way:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sourceCode .ruby" data-lang=".sourceCode .ruby">def addition(number1, number2)
+  2
+end</code></pre></div>
+<p>Also it is optional to use the return statement. If return is missing it
+is assumed that the last line of the function&rsquo;s body is the value being
+returned.</p>
+
+<p>Yey! We have the our real code now. Let&rsquo;s run the test suite again. Here
+is the output:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sourceCode .shell" data-lang=".sourceCode .shell">.
+
+Finished in 0.17 milliseconds
+1 examples, 0 failures, 0 errors, 0 pending</code></pre></div>
+<p>Wow! Our test is passing. But wait&hellip;we don&rsquo;t have a real
+implementation, just a hardcoded return. Change the addition function
+body to something real:</p>
+<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sourceCode .ruby" data-lang=".sourceCode .ruby">def addition(number1 : Int, number2 : Int)
+  number1 + number2
+end</code></pre></div>
+<p>Voilá! Our code is working fine and it will work for other values too.</p>
+
+<p>I hope you have learned something here. Leave a comment if you find it
+useful or if you disagree with anything.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "maugzoide" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Removing code makes me happy</p>
+    
+     © 2020
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
